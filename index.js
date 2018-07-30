@@ -45,8 +45,7 @@ express()
     showStack: true,
   }))
   .post('/message', (req, res) => {
-  // TODO: Check for valid POST data
-    const { socketId, channel, message } = req.body;
+    let { socketId, channel, message } = req.body;
     pusher.trigger(channel, 'message', message, socketId, pusherCallback);
     res.send(200);
   })
