@@ -23,9 +23,9 @@ pusher.connection.bind('state_change', (states) => {
     case 'connected':
       socketId = pusher.connection.socket_id;
       break;
-    default:
-      socketId = pusher.connection.socket_id;
-      break;
+    // default:
+    //   socketId = pusher.connection.socket_id;
+    //   break;
     case 'disconnected':
     case 'failed':
     case 'unavailable':

@@ -8,3 +8,4 @@ rules:
   prefer-const: 1
   no-use-before-define: 1
   no-extra-semi: 1
+  default-case: 1
