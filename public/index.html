@@ -21,7 +21,7 @@
 
     <div class="row">
       <section class="col-md-12">
-        <p>This chat application uses WebRTC to create a peer-to-peer, server-less connection between you and the recipient of your chat messages, a bit like Skype!</p>
+        <p>This chat application uses WebRTC to create a peer-to-peer, server-less connection between you and the recipient of your OSC messages</p>
         
         <hr>
 
@@ -75,13 +75,13 @@
   </div>
   
   <!-- Zepto for AJAX -->
-  <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script> -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.3/zepto.min.js"></script>
 
   <!-- Pusher for WebRTC signalling -->
-  <!-- <script src="//js.pusher.com/4.1/pusher.js"></script> -->
+  <script src="//js.pusher.com/4.1/pusher.js"></script>
   
   <!-- DataChannel.js for WebRTC functionality -->
-  <!-- <script src="//webrtc-experiment.com/DataChannel.js"></script> -->
+  <script src="//webrtc-experiment.com/DataChannel.js"></script>
   
   <!-- OSC-js -->
   <!-- <script type="text/javascript" src="../node_modules/osc-js/lib/osc.browser.min.js"></script> -->
@@ -91,20 +91,18 @@
   <!-- <script src="chat-osc.js"></script> -->
 
   <!-- Fill channel name -->
-  <!-- <script>
+  <script>
     function getParameterByName(name) {
       name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
-      var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+      let regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
           results = regex.exec(location.search);
       return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
     }
-
-    var channel = getParameterByName("channel");
-
+    const channel = getParameterByName("channel");
     if (channel) {
       document.querySelector(".demo-chat-channel-input").value = channel;
     }
-  </script>  -->
+  </script>
 </body>
 </html>
 
